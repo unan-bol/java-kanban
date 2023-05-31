@@ -91,6 +91,39 @@ public class Manager {
         epic.setId(id);
         updateEpicStatus(epic);
     }
+
+    public ArrayList<SimpleTask> getAllSimpleTasks(){
+        return new ArrayList<>(simpleTasks.values());
+    }
+
+    public ArrayList<Epic> getAllEpics(){
+        return new ArrayList<>(epics.values());
+    }
+
+    public ArrayList<Subtask> getAllSubtasks(){
+        return new ArrayList<>(subtasks.values());
+    }
+
+    public SimpleTask getSimpleTaskById(int id){
+        return simpleTasks.get(id);
+    }
+
+    public Subtask getSubtaskById(int id){
+        return subtasks.get(id);
+    }
+
+    public Epic getEpicById(int id){
+        return epics.get(id);
+    }
+
+    public ArrayList<Subtask> getSubtaskByEpic(Epic epic){
+        ArrayList<Subtask> subtask= new ArrayList<>();
+        for  (Integer id: epic.getSubtaskIds()){
+            subtask.add(subtasks.get(id));
+        }
+    return subtask;
+    }
+
     private void updateEpicStatus(Epic epic){
         String status = "NEW";
         boolean isDone = true;
@@ -117,40 +150,6 @@ public class Manager {
         } else{
             epic.setStatus("IS_PROGRESS");
         }
-    }
-
-    public Collection<SimpleTask> getAllSimpleTasks(){
-        return simpleTasks.values();
-    }
-
-    public Collection<Epic> getAllEpics(){
-        return epics.values();
-    }
-
-    public Collection<Subtask> getAllSubtasks(){
-        return subtasks.values();
-    }
-
-    public SimpleTask getSimpleTaskById(int id){
-        return simpleTasks.get(id);
-    }
-
-    public Subtask getSubtaskById(int id){
-        return subtasks.get(id);
-    }
-
-    public Epic getEpicById(int id){
-        return epics.get(id);
-    }
-
-    public ArrayList<Subtask> getSubtaskByEpic(Epic epic){
-        ArrayList<Subtask> subtask= new ArrayList<>();
-        for  (Subtask task: subtasks.values()){
-            if (task.getEpicId() == epic.getId()){
-                subtask.add(task);
-            }
-        }
-    return subtask;
     }
 
 }

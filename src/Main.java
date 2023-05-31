@@ -28,11 +28,8 @@ public class Main {
         System.out.println(manager.getAllSubtasks());
         System.out.println(manager.getAllEpics());
 
-        manager.deleteById(5);
+        System.out.println(manager.getSubtaskByEpic(epic1));
 
-        System.out.println(manager.getAllSimpleTasks());
-        System.out.println(manager.getAllSubtasks());
-        System.out.println(manager.getAllEpics());
 
 
 
