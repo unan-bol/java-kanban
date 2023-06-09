@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1826f145-5fe1-4961-8480-3205b55b7773" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-kanban/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-kanban/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-kanban/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-kanban/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-kanban/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-kanban/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-kanban/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-kanban/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-kanban/service/InMemoryHistoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-kanban/service/InMemoryHistoryManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-kanban/service/InMemoryTaskManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-kanban/service/InMemoryTaskManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-kanban/service/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-kanban/service/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/HistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/HistoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/InMemoryHistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/InMemoryHistoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/InMemoryTaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/InMemoryTaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/TaskManager.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Qxk15IXtnuhHvyl5wsIWCDRHjC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/korol/IdeaProjects/java-kanban/src"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="java-kanban" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1826f145-5fe1-4961-8480-3205b55b7773" name="Changes" comment="" />
+      <created>1686302408921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686302408921</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/service/InMemoryTaskManager.java</url>
+          <line>67</line>
+          <properties class="service.InMemoryTaskManager" method="deleteById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/InMemoryTaskManager.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/InMemoryTaskManager.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/InMemoryTaskManager.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/InMemoryTaskManager.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/InMemoryTaskManager.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/InMemoryTaskManager.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/InMemoryTaskManager.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/InMemoryTaskManager.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

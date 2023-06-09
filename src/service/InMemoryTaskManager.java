@@ -11,7 +11,7 @@ public class InMemoryTaskManager implements TaskManager{
     public HashMap<Integer, SimpleTask> simpleTasks = new HashMap<>();
     public HashMap<Integer, Epic> epics = new HashMap<>();
     public HashMap<Integer, Subtask> subtasks = new HashMap<>();
-    public InMemoryHistoryManager historyManager = new InMemoryHistoryManager();
+    public HistoryManager historyManager = new InMemoryHistoryManager();
 
 
     @Override
@@ -69,10 +69,11 @@ public class InMemoryTaskManager implements TaskManager{
         if (simpleTasks.containsKey(id)){
             simpleTasks.remove(id);
         } else if (epics.containsKey(id)){
-            Subtask subtask = subtasks.get(epics.remove(id).getId());
-            if (subtask.getEpicId() == id){
-                subtasks.remove(id);
+            Epic epic = epics.get(id);
+            for (int i = 0; i < epic.getSubtaskIds().size(); i++) {
+                subtasks.remove(epic.getSubtaskIds().get(i));
             }
+            epics.remove(id);
         } else if (subtasks.containsKey(id)){
             Subtask subtask = subtasks.get(id);
             Epic epic = epics.get(subtask.getEpicId());
@@ -154,10 +155,10 @@ public class InMemoryTaskManager implements TaskManager{
         }
         return subtask;
     }
+
     public List<Task> getHistory(){
         return historyManager.getHistory();
     }
-
 
     private void updateEpicStatus(Epic epic){
         String status = "NEW";
@@ -166,13 +167,13 @@ public class InMemoryTaskManager implements TaskManager{
 
         for (int i = 0; i < epic.getSubtaskIds().size(); i++) {
             Subtask subtask = subtasks.get(epic.getSubtaskIds().get(i));
-            if (subtask.getStatus().equals("IN_PROGRESS")) {
+            if (subtask.getStatus().equals(Status.IN_PROGRESS)){
                 status  = "IN_PROGRESS";
                 isProgress = true;
                 break;
-            } else if (subtask.getStatus().equals("NEW")) {
+            } else if (subtask.getStatus().equals(Status.NEW)) {
                 isDone = false;
-            } else if ((subtask.getStatus().equals("DONE")) && (!isDone)) {
+            } else if ((subtask.getStatus().equals(Status.DONE)) && (!isDone)) {
                 status = "IN_PROGRESS";
                 isProgress = true;
                 break;
