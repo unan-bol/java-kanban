@@ -46,17 +46,30 @@ public class InMemoryTaskManager implements TaskManager{
 
     @Override
     public void deleteSimpleTasks(){
+        for (SimpleTask simpleTask: simpleTasks.values()){
+            historyManager.remove(simpleTask.getId());
+        }
         simpleTasks.clear();
+
     }
 
     @Override
     public void deleteEpic(){
+        for (Epic epic: epics.values()){
+            historyManager.remove(epic.getId());
+        }
+        for (Subtask subtask: subtasks.values()){
+            historyManager.remove(subtask.getId());
+        }
         epics.clear();
         subtasks.clear();
     }
 
     @Override
     public void deleteSubTask(){
+        for (Subtask subtask: subtasks.values()){
+            historyManager.remove(subtask.getId());
+        }
         subtasks.clear();
         for(Integer id: epics.keySet()){
             epics.get(id).getSubtaskIds().clear();
@@ -67,12 +80,17 @@ public class InMemoryTaskManager implements TaskManager{
     @Override
     public void deleteById(int id){
         if (simpleTasks.containsKey(id)){
+            SimpleTask simpleTask = simpleTasks.get(id);
+            historyManager.remove(id);
             simpleTasks.remove(id);
         } else if (epics.containsKey(id)){
             Epic epic = epics.get(id);
-            for (int i = 0; i < epic.getSubtaskIds().size(); i++) {
-                subtasks.remove(epic.getSubtaskIds().get(i));
+            //for (int i = 0; i < epic.getSubtaskIds().size(); i++) {
+            for (int i:epic.getSubtaskIds()) {
+                historyManager.remove(i);
+                subtasks.remove(i);
             }
+            historyManager.remove(id);
             epics.remove(id);
         } else if (subtasks.containsKey(id)){
             Subtask subtask = subtasks.get(id);
@@ -82,6 +100,7 @@ public class InMemoryTaskManager implements TaskManager{
                     epic.getSubtaskIds().remove(i);
                 }
             }
+            historyManager.remove(id);
             subtasks.remove(id);
             updateEpicStatus(epic);
         }

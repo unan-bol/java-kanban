@@ -1,5 +1,6 @@
 package service;
 import model.Task;
+
 import java.util.List;
 public interface HistoryManager {
 
@@ -8,5 +9,8 @@ public interface HistoryManager {
 
     // выводит историю задач (последние 10 просмотренных задач)
     List<Task> getHistory();
+
+    //удаление задач из просмотра
+    void remove(int id);
 
 }
