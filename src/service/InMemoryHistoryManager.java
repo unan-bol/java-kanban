@@ -69,6 +69,9 @@ public class InMemoryHistoryManager implements HistoryManager {
         }
     }
 
+    /**
+     * Класс Node для хранения данных эл-та и ссылок на предыдущего и следующего эл-тов.
+     */
     public static class Node<T> {
 
         public Task data;

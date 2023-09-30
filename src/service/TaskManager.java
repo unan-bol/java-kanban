@@ -4,43 +4,91 @@ import model.Task;
 import model.Epic;
 import model.SimpleTask;
 import model.Subtask;
-import java.util.ArrayList;
+import java.util.List;
 
 public interface TaskManager {
-    // метод сохраняет простую задачу в список простых задач
+    /**
+     * Метод сохраняет простую задачу в список простых задач.
+     * @task задача
+     */
     int saveSimpleTask(SimpleTask task);
-    // метод сохраняет эпик в список эпиков
+    /**
+     * Метод сохраняет эпик в список эпиков.
+     * @epic эпик
+     */
     int saveEpic(Epic epic);
-    // метод сохраняет подзадачи в список подзадач
+    /**
+     * Метод сохраняет подзадачи в список подзадач.
+     * @subtask подзадача
+     */
     int saveSubtask(Subtask subtask);
-    // метод удаляет все простые задачи
+    /**
+     * Метод удаляет все простые задачи.
+     */
     void deleteSimpleTasks();
-    // метод удаляет все эпики вместе с подзадачами
+    /**
+     * Метод удаляет все эпики вместе с подзадачами.
+     */
     void deleteEpic();
-    // метод удаляет все подзадачи и очищает список id подзадач в эпике
+    /**
+     * Метод удаляет все подзадачи и очищает список id подзадач в эпике.
+     */
     void deleteSubTask();
-    //метод удаляет задачу с указанным id
+    /**
+     * Метод удаляет задачу с указанным id.
+     * @id id задачи
+     */
     void deleteById(int id);
-    // метод обновляет простую задачу с указанным id
+    /**
+     * Метод обновляет простую задачу с указанным id.
+     * @simpletask задача
+     * @id id задачи
+     */
     void updateSimpleTask(SimpleTask simpleTask, int id);
-    // метод обновляет подзадачу с указанным id
+    /**
+     * Метод обновляет подзадачу с указанным id.
+     * @subtask подзадача
+     * @id id подзадачи
+     */
     void updateSubtask(Subtask subtask, int id);
-    // метод обновляет эпик с указанным id
+    /**
+     * Метод обновляет эпик с указанным id.
+     * @epic эпик
+     * @id id эпика
+     */
     void updateEpic(Epic epic, int id);
-    // метод выводит все сохраненные простые задачи
-    ArrayList<SimpleTask> getAllSimpleTasks();
-    // метод выводит все сохраненные эпики
-    ArrayList<Epic> getAllEpics();
-    // метод выводит все сохраненные подзадачи
-    ArrayList<Subtask> getAllSubtasks();
-    // выводит сохраненную простую задачу с указанным id
+    /**
+     * Метод выводит все сохраненные простые задачи.
+     */
+    List<SimpleTask> getAllSimpleTasks();
+    /**
+     * Метод выводит все сохраненные эпики.
+     */
+    List<Epic> getAllEpics();
+    /**
+     * Метод выводит все сохраненные подзадачи.
+     */
+    List<Subtask> getAllSubtasks();
+    /**
+     * Метод выводит сохраненную простую задачу с указанным id.
+     * @id id задачи
+     */
     SimpleTask getSimpleTaskById(int id);
-    // выводит сохраненную подзадачу с указанным id
+    /**
+     * Метод выводит сохраненную подзадачу с указанным id.
+     * @id id подзадачи
+     */
     Subtask getSubtaskById(int id);
-    // выводит сохраненный эпик с указанным id
+    /**
+     * Метод выводит сохраненный эпик с указанным id.
+     * @id id эпика
+     */
     Epic getEpicById(int id);
-    // выводит все подзадачи эпика
-    ArrayList<Subtask> getSubtaskByEpic(Epic epic);
+    /**
+     * Метод выводит все подзадачи эпика.
+     * @epic эпик
+     */
+    List<Subtask> getSubtaskByEpic(Epic epic);
 
 
 

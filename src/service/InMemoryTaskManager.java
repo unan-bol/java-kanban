@@ -2,6 +2,7 @@ package service;
 
 import model.*;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
@@ -126,7 +127,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     @Override
-    public ArrayList<SimpleTask> getAllSimpleTasks(){
+    public List<SimpleTask> getAllSimpleTasks(){
         for (Task task: simpleTasks.values()) {
             historyManager.add(task);
         }
@@ -134,7 +135,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     @Override
-    public ArrayList<Epic> getAllEpics(){
+    public List<Epic> getAllEpics(){
         for (Task task: epics.values()) {
             historyManager.add(task);
         }
@@ -142,7 +143,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     @Override
-    public ArrayList<Subtask> getAllSubtasks(){
+    public List<Subtask> getAllSubtasks(){
         for (Task task: subtasks.values()) {
             historyManager.add(task);
         }
@@ -167,8 +168,8 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     @Override
-    public ArrayList<Subtask> getSubtaskByEpic(Epic epic){
-        ArrayList<Subtask> subtask= new ArrayList<>();
+    public List<Subtask> getSubtaskByEpic(Epic epic){
+        List<Subtask> subtask= new ArrayList<>();
         for  (Integer id: epic.getSubtaskIds()){
             subtask.add(subtasks.get(id));
         }
