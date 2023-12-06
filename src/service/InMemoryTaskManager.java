@@ -152,19 +152,29 @@ public class InMemoryTaskManager implements TaskManager{
 
     @Override
     public SimpleTask getSimpleTaskById(int id){
-
-        return simpleTasks.get(id);
+        SimpleTask task = simpleTasks.get(id);
+        if (task != null){
+            historyManager.add(task);
+        }
+        return task;
     }
 
     @Override
     public Subtask getSubtaskById(int id){
-
-        return subtasks.get(id);
+        Subtask task = subtasks.get(id);
+        if (task != null){
+            historyManager.add(task);
+        }
+        return task;
     }
 
     @Override
     public Epic getEpicById(int id){
-        return epics.get(id);
+        Epic task = epics.get(id);
+        if (task != null){
+            historyManager.add(task);
+        }
+        return task;
     }
 
     @Override
@@ -172,6 +182,7 @@ public class InMemoryTaskManager implements TaskManager{
         List<Subtask> subtask= new ArrayList<>();
         for  (Integer id: epic.getSubtaskIds()){
             subtask.add(subtasks.get(id));
+            historyManager.add(subtasks.get(id));
         }
         return subtask;
     }
@@ -180,7 +191,7 @@ public class InMemoryTaskManager implements TaskManager{
         return historyManager.getHistory();
     }
 
-    private void updateEpicStatus(Epic epic){
+    public void updateEpicStatus(Epic epic){
         String status = "NEW";
         boolean isDone = true;
         boolean isProgress  = false;

@@ -1,9 +1,9 @@
 package model;
 
 public class SimpleTask extends Task{
-    public SimpleTask(String name, String details, int id, Status status) {
+    public SimpleTask(String name, String details, int id, Status status, Type type) {
 
-        super(name, details, id, status);
+        super(name, details, id, status, type);
     }
     @Override
     public String toString() {

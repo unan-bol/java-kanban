@@ -6,11 +6,14 @@ public class Task {
     private int id;
     private Status status;
 
-    public Task(String name, String details, int id, Status status) {
+    private Type type;
+
+    public Task(String name, String details, int id, Status status, Type type) {
         this.name = name;
         this.details = details;
         this.id = id;
         this.status = status;
+        this.type = type;
     }
     public String getName() {
         return name;
@@ -42,6 +45,18 @@ public class Task {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public String taskToString(){
+        return getName() + "," + getDetails() + "," + getId() + "," + getStatus() + "," + getType();
     }
 
 }
