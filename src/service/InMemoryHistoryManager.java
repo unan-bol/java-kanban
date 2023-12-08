@@ -1,6 +1,7 @@
 package service;
 
 import model.Task;
+
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,13 +21,13 @@ public class InMemoryHistoryManager implements HistoryManager {
 
     @Override
     public List<Task> getHistory() {
-       return getTasks();
+        return getTasks();
     }
 
     @Override
     public void remove(int id) {
         Node node = customLinkedList.get(id);
-        if (node == null){
+        if (node == null) {
             return;
         }
         customLinkedList.remove(id);

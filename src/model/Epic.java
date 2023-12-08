@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class Epic extends Task{
+public class Epic extends Task {
     ArrayList<Integer> subtaskIds = new ArrayList<>();
 
     public Epic(String name, String details, int id, Status status, Type type) {
@@ -25,8 +25,8 @@ public class Epic extends Task{
         return "Epic{" +
                 "name = '" + getName() + '\'' +
                 ", details = '" + getDetails() + '\'' +
-        ", id = '" + getId() + '\'' +
-        ", status = " + getStatus() +
+                ", id = '" + getId() + '\'' +
+                ", status = " + getStatus() +
                 "}";
     }
 }

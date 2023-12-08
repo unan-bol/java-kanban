@@ -27,7 +27,7 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
             }
             writer.write("\n" + historyToString(historyManager));
         } catch (IOException exception) {
-                throw new ManagerSaveException(exception.getMessage());
+            throw new ManagerSaveException(exception.getMessage());
         }
     }
 
@@ -132,13 +132,13 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
                 }
             }
         } catch (IOException exception) {
-                throw new ManagerSaveException(exception.getMessage());
+            throw new ManagerSaveException(exception.getMessage());
         }
         return fileBackedTasksManager;
     }
 
     public static void main(String[] args) {
-        File file = new File("src/file.csv");
+        File file = new File("file.csv");
         FileBackedTasksManager fileBackedTasksManager = new FileBackedTasksManager(file);
         SimpleTask simpleTask1 = new SimpleTask("UntitledSimpleTask1", "one", 1, Status.NEW, Type.SIMPLETASK);
         fileBackedTasksManager.saveSimpleTask(simpleTask1);
